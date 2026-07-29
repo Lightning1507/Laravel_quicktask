@@ -1,0 +1,26 @@
+name: Code Quality Check
+
+on:
+  push:
+    branches: [main, chapter-1]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sunlint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Sunlint
+        run: npm install -g @sun-asterisk/sunlint
+
+      - name: Run Sunlint
+        run: sunlint --all --changed-files --fail-on-new-violations
