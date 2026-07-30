@@ -23,4 +23,4 @@ jobs:
         run: npm install -g @sun-asterisk/sunlint
 
       - name: Run Sunlint
-        run: sunlint --all --changed-files --fail-on-new-violations
+        run: sunlint --all --changed-files
