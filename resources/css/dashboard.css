@@ -1,0 +1,27 @@
+@import "admin-lte/dist/css/adminlte.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+.quicktask-dashboard {
+    background: #f4f6f9;
+    min-height: calc(100vh - 4rem);
+}
+
+.quicktask-dashboard .app-content-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.quicktask-dashboard .small-box {
+    border-radius: 0.5rem;
+}
+
+.quicktask-dashboard .card {
+    border-radius: 0.5rem;
+}
+
+.quicktask-dashboard .quicktask-status-dot {
+    border-radius: 999px;
+    display: inline-block;
+    height: 0.625rem;
+    margin-right: 0.5rem;
+    width: 0.625rem;
+}
