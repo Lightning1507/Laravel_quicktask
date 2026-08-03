@@ -12,7 +12,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::all();
+        return view('users.index', [
+            'users' => User::withCount('tasks')->latest()->get(),
+        ]);
     }
 
     /**
@@ -36,7 +38,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return $user;
+        return view('users.show', [
+            'user' => $user->load('tasks'),
+        ]);
     }
 
     /**
